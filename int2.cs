@@ -16,4 +16,10 @@ namespace RodMath
 			this.y = x;
 		}
 	}
+
+	public static partial class math
+	{
+		public static int2 int2(int x, int y) => new int2(x, y);
+		public static int2 int2(int x) => new int2(x);
+	}
 }
