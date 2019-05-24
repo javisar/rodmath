@@ -70,10 +70,10 @@ namespace RodMath
 		public static float3 clamp(float3 v, float3 a, float3 b) => max(a, min(b, v));
 		public static float4 clamp(float4 v, float4 a, float4 b) => max(a, min(b, v));
 
-		public static float  saturate(float  v) => clamp(v, 0.0f, 1.0f);
-		public static float2 saturate(float2 v) => clamp(v, float2(0.0f), float2(1.0f));
-		public static float3 saturate(float3 v) => clamp(v, float3(0.0f), float3(1.0f));
-		public static float4 saturate(float4 v) => clamp(v, float4(0.0f), float4(1.0f));
+		public static float  saturate(float  a) => clamp(a, 0.0f, 1.0f);
+		public static float2 saturate(float2 a) => clamp(a, float2(0.0f), float2(1.0f));
+		public static float3 saturate(float3 a) => clamp(a, float3(0.0f), float3(1.0f));
+		public static float4 saturate(float4 a) => clamp(a, float4(0.0f), float4(1.0f));
 
 		static bool  isfinite(float  a) => abs(a) < float.PositiveInfinity;
 		static bool2 isfinite(float2 a) => abs(a) < float.PositiveInfinity;
