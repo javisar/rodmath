@@ -74,5 +74,20 @@ namespace RodMath
 		public static float2 saturate(float2 v) => clamp(v, float2(0.0f), float2(1.0f));
 		public static float3 saturate(float3 v) => clamp(v, float3(0.0f), float3(1.0f));
 		public static float4 saturate(float4 v) => clamp(v, float4(0.0f), float4(1.0f));
+
+		static bool  isfinite(float  a) => abs(a) < float.PositiveInfinity;
+		static bool2 isfinite(float2 a) => abs(a) < float.PositiveInfinity;
+		static bool3 isfinite(float3 a) => abs(a) < float.PositiveInfinity;
+		static bool4 isfinite(float4 a) => abs(a) < float.PositiveInfinity;
+
+		static bool  isinf(float  a) => abs(a) == float.PositiveInfinity;
+		static bool2 isinf(float2 a) => abs(a) == float.PositiveInfinity;
+		static bool3 isinf(float3 a) => abs(a) == float.PositiveInfinity;
+		static bool4 isinf(float4 a) => abs(a) == float.PositiveInfinity;
+
+		static unsafe bool  isnan(float  a) => ((*(uint *) &a) & 0x7FFFFFFF) > 0x7F800000;
+		static unsafe bool2 isnan(float2 a) => ((*(uint2*) &a) & 0x7FFFFFFF) > 0x7F800000;
+		static unsafe bool3 isnan(float3 a) => ((*(uint3*) &a) & 0x7FFFFFFF) > 0x7F800000;
+		static unsafe bool4 isnan(float4 a) => ((*(uint4*) &a) & 0x7FFFFFFF) > 0x7F800000;
 	}
 }
