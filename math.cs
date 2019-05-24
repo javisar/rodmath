@@ -94,5 +94,10 @@ namespace RodMath
 		static float2 floor(float2 a) => float2(floor(a.x), floor(a.y));
 		static float3 floor(float3 a) => float3(floor(a.x), floor(a.y), floor(a.z));
 		static float4 floor(float4 a) => float4(floor(a.x), floor(a.y), floor(a.z), floor(a.w));
+
+		static float  ceil(float  a) => (float) System.Math.Ceiling(a);
+		static float2 ceil(float2 a) => float2(ceil(a.x), ceil(a.y));
+		static float3 ceil(float3 a) => float3(ceil(a.x), ceil(a.y), ceil(a.z));
+		static float4 ceil(float4 a) => float4(ceil(a.x), ceil(a.y), ceil(a.z), ceil(a.w));
 	}
 }
