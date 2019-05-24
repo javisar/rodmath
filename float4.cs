@@ -11,5 +11,13 @@ namespace RodMath
 			this.z = z;
 			this.w = w;
 		}
+
+		public float4(float x)
+		{
+			this.x = x;
+			this.y = x;
+			this.z = x;
+			this.w = x;
+		}
 	}
 }
