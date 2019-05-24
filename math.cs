@@ -131,5 +131,15 @@ namespace RodMath
 		static float dot(float2 a, float2 b) => a.x*b.x + a.y*b.y;
 		static float dot(float3 a, float3 b) => a.x*b.x + a.y*b.y + a.z*b.z;
 		static float dot(float4 a, float4 b) => a.x*b.x + a.y*b.y + a.z*b.z + a.w*b.w;
+
+		static float  reflect(float  a, float  b) => a - 2.0f * b * dot(a, b);
+		static float2 reflect(float2 a, float2 b) => a - 2.0f * b * dot(a, b);
+		static float3 reflect(float3 a, float3 b) => a - 2.0f * b * dot(a, b);
+		static float4 reflect(float4 a, float4 b) => a - 2.0f * b * dot(a, b);
+
+		static int  reflect(int  a, int  b) => a - 2 * b * dot(a, b);
+		static int2 reflect(int2 a, int2 b) => a - 2 * b * dot(a, b);
+		static int3 reflect(int3 a, int3 b) => a - 2 * b * dot(a, b);
+		static int4 reflect(int4 a, int4 b) => a - 2 * b * dot(a, b);
 	}
 }
