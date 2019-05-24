@@ -240,14 +240,34 @@ namespace RodMath
 		static float4 atan2(float4 a, float4 b) => float4(atan2(a.x, b.x), atan2(a.y, b.y), atan2(a.z, b.z), atan2(a.w, b.w));
 
 		static float  mad(float  a, float  b, float  c) => a*b + c;
-		static float2 mad(float2 a, float2 b, float2 c) => float2(mad(a.x, b.x, c.x), mad(a.y, b.y, c.y));
-		static float3 mad(float3 a, float3 b, float3 c) => float3(mad(a.x, b.x, c.x), mad(a.y, b.y, c.y), mad(a.z, b.z, c.z));
-		static float4 mad(float4 a, float4 b, float4 c) => float4(mad(a.x, b.x, c.x), mad(a.y, b.y, c.y), mad(a.z, b.z, c.z), mad(a.w, b.w, c.w));
+		static float2 mad(float2 a, float2 b, float2 c) => a*b + c;
+		static float3 mad(float3 a, float3 b, float3 c) => a*b + c;
+		static float4 mad(float4 a, float4 b, float4 c) => a*b + c;
+
+		static int  mad(int  a, int  b, int  c) => a*b + c;
+		static int2 mad(int2 a, int2 b, int2 c) => a*b + c;
+		static int3 mad(int3 a, int3 b, int3 c) => a*b + c;
+		static int4 mad(int4 a, int4 b, int4 c) => a*b + c;
+
+		static uint  mad(uint  a, uint  b, uint  c) => a*b + c;
+		static uint2 mad(uint2 a, uint2 b, uint2 c) => a*b + c;
+		static uint3 mad(uint3 a, uint3 b, uint3 c) => a*b + c;
+		static uint4 mad(uint4 a, uint4 b, uint4 c) => a*b + c;
 
 		static float  lerp(float  a, float  b, float  c) => a + c * (b - a);
-		static float2 lerp(float2 a, float2 b, float2 c) => float2(lerp(a.x, b.x, c.x), lerp(a.y, b.y, c.y));
-		static float3 lerp(float3 a, float3 b, float3 c) => float3(lerp(a.x, b.x, c.x), lerp(a.y, b.y, c.y), lerp(a.z, b.z, c.z));
-		static float4 lerp(float4 a, float4 b, float4 c) => float4(lerp(a.x, b.x, c.x), lerp(a.y, b.y, c.y), lerp(a.z, b.z, c.z), lerp(a.w, b.w, c.w));
+		static float2 lerp(float2 a, float2 b, float2 c) => a + c * (b - a);
+		static float3 lerp(float3 a, float3 b, float3 c) => a + c * (b - a);
+		static float4 lerp(float4 a, float4 b, float4 c) => a + c * (b - a);
+
+		static int  lerp(int  a, int  b, int  c) => a + c * (b - a);
+		static int2 lerp(int2 a, int2 b, int2 c) => a + c * (b - a);
+		static int3 lerp(int3 a, int3 b, int3 c) => a + c * (b - a);
+		static int4 lerp(int4 a, int4 b, int4 c) => a + c * (b - a);
+
+		static uint  lerp(uint  a, uint  b, uint  c) => a + c * (b - a);
+		static uint2 lerp(uint2 a, uint2 b, uint2 c) => a + c * (b - a);
+		static uint3 lerp(uint3 a, uint3 b, uint3 c) => a + c * (b - a);
+		static uint4 lerp(uint4 a, uint4 b, uint4 c) => a + c * (b - a);
 
 		static float  sign(float  a) => a > 0.0f ? 1.0f : a < 0.0f ? -1.0f : 0.0f;
 		static float2 sign(float2 a) => float2(sign(a.x), sign(a.y));
