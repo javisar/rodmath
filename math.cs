@@ -104,5 +104,10 @@ namespace RodMath
 		static float2 round(float2 a) => float2(round(a.x), round(a.y));
 		static float3 round(float3 a) => float3(round(a.x), round(a.y), round(a.z));
 		static float4 round(float4 a) => float4(round(a.x), round(a.y), round(a.z), round(a.w));
+
+		static float  trunc(float  a) => (float) System.Math.Truncate(a);
+		static float2 trunc(float2 a) => float2(trunc(a.x), trunc(a.y));
+		static float3 trunc(float3 a) => float3(trunc(a.x), trunc(a.y), trunc(a.z));
+		static float4 trunc(float4 a) => float4(trunc(a.x), trunc(a.y), trunc(a.z), trunc(a.w));
 	}
 }
