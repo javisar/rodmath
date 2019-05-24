@@ -16,6 +16,30 @@ namespace RodMath
 			this.y = x;
 		}
 
+		public static bool2 operator ==(int2 a, int2 b) => new bool2(a.x == b.x, a.y == b.y);
+		public static bool2 operator ==(int2 a, int  b) => new bool2(a.x == b  , a.y == b  );
+		public static bool2 operator ==(int  a, int2 b) => new bool2(a   == b.x, a   == b.y);
+
+		public static bool2 operator !=(int2 a, int2 b) => new bool2(a.x != b.x, a.y != b.y);
+		public static bool2 operator !=(int2 a, int  b) => new bool2(a.x != b  , a.y != b  );
+		public static bool2 operator !=(int  a, int2 b) => new bool2(a   != b.x, a   != b.y);
+
+		public static bool2 operator < (int2 a, int2 b) => new bool2(a.x <  b.x, a.y <  b.y);
+		public static bool2 operator < (int2 a, int  b) => new bool2(a.x <  b  , a.y <  b  );
+		public static bool2 operator < (int  a, int2 b) => new bool2(a   <  b.x, a   <  b.y);
+
+		public static bool2 operator > (int2 a, int2 b) => new bool2(a.x >  b.x, a.y >  b.y);
+		public static bool2 operator > (int2 a, int  b) => new bool2(a.x >  b  , a.y >  b  );
+		public static bool2 operator > (int  a, int2 b) => new bool2(a   >  b.x, a   >  b.y);
+
+		public static bool2 operator <=(int2 a, int2 b) => new bool2(a.x <= b.x, a.y <= b.y);
+		public static bool2 operator <=(int2 a, int  b) => new bool2(a.x <= b  , a.y <= b  );
+		public static bool2 operator <=(int  a, int2 b) => new bool2(a   <= b.x, a   <= b.y);
+
+		public static bool2 operator >=(int2 a, int2 b) => new bool2(a.x >= b.x, a.y >= b.y);
+		public static bool2 operator >=(int2 a, int  b) => new bool2(a.x >= b  , a.y >= b  );
+		public static bool2 operator >=(int  a, int2 b) => new bool2(a   >= b.x, a   >= b.y);
+
 		public static int2 operator +(int2 a, int2 b) => new int2(a.x + b.x, a.y + b.y);
 		public static int2 operator +(int2 a, int  b) => new int2(a.x + b  , a.y + b  );
 		public static int2 operator +(int  a, int2 b) => new int2(a   + b.x, a   + b.y);
