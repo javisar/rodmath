@@ -43,9 +43,9 @@ namespace RodMath
 		public static uint4 max(uint4 a, uint4 b) => uint4(max(a.x,b.x),max(a.y,b.y),max(a.z,b.z),max(a.w,b.w));
 
 		public static float  max(float  a, float  b) => a > b ? a : b;
-		public static float2 max(float2 a, float2 b) => floatt2(max(a.x,b.x),max(a.y,b.y));
-		public static float3 max(float3 a, float3 b) => floatt3(max(a.x,b.x),max(a.y,b.y),max(a.z,b.z));
-		public static float4 max(float4 a, float4 b) => floatt4(max(a.x,b.x),max(a.y,b.y),max(a.z,b.z),max(a.w,b.w));
+		public static float2 max(float2 a, float2 b) => float2(max(a.x,b.x),max(a.y,b.y));
+		public static float3 max(float3 a, float3 b) => float3(max(a.x,b.x),max(a.y,b.y),max(a.z,b.z));
+		public static float4 max(float4 a, float4 b) => float4(max(a.x,b.x),max(a.y,b.y),max(a.z,b.z),max(a.w,b.w));
 
 		public static int  min(int  a, int  b) => a > b ? b : a;
 		public static int2 min(int2 a, int2 b) => int2(min(a.x,b.x),min(a.y,b.y));
