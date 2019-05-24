@@ -25,5 +25,14 @@ namespace RodMath
 		static int3 abs(int3 a) => (a + (a >> 31)) ^ (a >> 31);
 		static int4 abs(int4 a) => (a + (a >> 31)) ^ (a >> 31);
 
+		static int  max(int  a, int  b) => (a + b + abs(a - b)) >> 1;
+		static int2 max(int2 a, int2 b) => (a + b + abs(a - b)) >> 1;
+		static int3 max(int3 a, int3 b) => (a + b + abs(a - b)) >> 1;
+		static int4 max(int4 a, int4 b) => (a + b + abs(a - b)) >> 1;
+
+		static int  min(int  a, int  b) => (a + b - abs(a - b)) >> 1;
+		static int2 min(int2 a, int2 b) => (a + b - abs(a - b)) >> 1;
+		static int3 min(int3 a, int3 b) => (a + b - abs(a - b)) >> 1;
+		static int4 min(int4 a, int4 b) => (a + b - abs(a - b)) >> 1;
 	}
 }
