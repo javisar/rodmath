@@ -17,6 +17,22 @@ namespace RodMath
 			this.y = x;
 			this.z = x;
 		}
+
+		public static int3 operator +(int3 a, int3 b) => new int3(a.x + b.x, a.y + b.y, a.z + b.z);
+		public static int3 operator +(int3 a, int  b) => new int3(a.x + b  , a.y + b  , a.z + b  );
+		public static int3 operator +(int  a, int3 b) => new int3(a   + b.x, a   + b.y, a   + b.z);
+
+		public static int3 operator -(int3 a, int3 b) => new int3(a.x - b.x, a.y - b.y, a.z - b.z);
+		public static int3 operator -(int3 a, int  b) => new int3(a.x - b  , a.y - b  , a.z - b  );
+		public static int3 operator -(int  a, int3 b) => new int3(a   - b.x, a   - b.y, a   - b.z);
+
+		public static int3 operator *(int3 a, int3 b) => new int3(a.x * b.x, a.y * b.y, a.z * b.z);
+		public static int3 operator *(int3 a, int  b) => new int3(a.x * b  , a.y * b  , a.z * b  );
+		public static int3 operator *(int  a, int3 b) => new int3(a   * b.x, a   * b.y, a   * b.z);
+
+		public static int3 operator /(int3 a, int3 b) => new int3(a.x / b.x, a.y / b.y, a.z / b.z);
+		public static int3 operator /(int3 a, int  b) => new int3(a.x / b  , a.y / b  , a.z / b  );
+		public static int3 operator /(int  a, int3 b) => new int3(a   / b.x, a   / b.y, a   / b.z);
 	}
 
 	public static partial class math
