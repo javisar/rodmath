@@ -149,25 +149,94 @@ namespace RodMath
 		static int3 reflect(int3 a, int3 b) => a - 2 * b * dot(a, b);
 		static int4 reflect(int4 a, int4 b) => a - 2 * b * dot(a, b);
 
-		static float exp (float a) => (float) System.Math.Exp(a);
-		static float exp2(float a) => (float) System.Math.Exp(a * ln_2);
-		static float log (float a) => (float) System.Math.Log(a);
-		static float log2(float a) => (float) System.Math.Log(a, 2.0f);
-		static float sqrt(float a) => (float) System.Math.Sqrt(a);
-		static float rsqrt(float a) => 1.0f / (float) System.Math.Sqrt(a);
-		static float rcp (float a) => 1.0f / a;
-		static float pow (float a, float b) => (float) System.Math.Pow(a, b);
+		static float  exp (float  a) => (float) System.Math.Exp(a);
+		static float2 exp (float2 a) => float2(exp(a.x), exp(a.y));
+		static float3 exp (float3 a) => float3(exp(a.x), exp(a.y), exp(a.z));
+		static float4 exp (float4 a) => float4(exp(a.x), exp(a.y), exp(a.z), exp(a.w));
 
+		static float  exp2(float  a) => (float) System.Math.Exp(a * ln_2);
+		static float2 exp2(float2 a) => float2(exp2(a.x), exp2(a.y));
+		static float3 exp2(float3 a) => float3(exp2(a.x), exp2(a.y), exp2(a.z));
+		static float4 exp2(float4 a) => float4(exp2(a.x), exp2(a.y), exp2(a.z), exp2(a.w));
 
-		static float sin (float a) => (float) System.Math.Sin(a);
-		static float sinh(float a) => (float) System.Math.Sinh(a);
-		static float asin(float a) => (float) System.Math.Asin(a);
-		static float cos (float a) => (float) System.Math.Cos(a);
-		static float cosh(float a) => (float) System.Math.Cosh(a);
-		static float acos(float a) => (float) System.Math.Acos(a);
-		static float tan (float a) => (float) System.Math.Tan(a);
-		static float tanh(float a) => (float) System.Math.Tanh(a);
-		static float atan(float a) => (float) System.Math.Atan(a);
-		static float atan2(float a, float b) => (float) System.Math.Atan2(a, b);
+		static float  log (float  a) => (float) System.Math.Log(a);
+		static float2 log (float2 a) => float2(log(a.x), log(a.y));
+		static float3 log (float3 a) => float3(log(a.x), log(a.y), log(a.z));
+		static float4 log (float4 a) => float4(log(a.x), log(a.y), log(a.z), log(a.w));
+
+		static float  log2(float  a) => (float) System.Math.Log(a, 2.0f);
+		static float2 log2(float2 a) => float2(log2(a.x), log2(a.y));
+		static float3 log2(float3 a) => float3(log2(a.x), log2(a.y), log2(a.z));
+		static float4 log2(float4 a) => float4(log2(a.x), log2(a.y), log2(a.z), log2(a.w));
+
+		static float  sqrt(float  a) => (float) System.Math.Sqrt(a);
+		static float2 sqrt(float2 a) => float2(sqrt(a.x), sqrt(a.y));
+		static float3 sqrt(float3 a) => float3(sqrt(a.x), sqrt(a.y), sqrt(a.z));
+		static float4 sqrt(float4 a) => float4(sqrt(a.x), sqrt(a.y), sqrt(a.z), sqrt(a.w));
+
+		static float  rsqrt(float  a) => 1.0f / (float) System.Math.Sqrt(a);
+		static float2 rsqrt(float2 a) => float2(rsqrt(a.x), rsqrt(a.y));
+		static float3 rsqrt(float3 a) => float3(rsqrt(a.x), rsqrt(a.y), rsqrt(a.z));
+		static float4 rsqrt(float4 a) => float4(rsqrt(a.x), rsqrt(a.y), rsqrt(a.z), rsqrt(a.w));
+
+		static float  rcp (float  a) => 1.0f / a;
+		static float2 rcp (float2 a) => float2(rcp(a.x), rcp(a.y));
+		static float3 rcp (float3 a) => float3(rcp(a.x), rcp(a.y), rcp(a.z));
+		static float4 rcp (float4 a) => float4(rcp(a.x), rcp(a.y), rcp(a.z), rcp(a.w));
+
+		static float  pow (float  a, float  b) => (float) System.Math.Pow(a, b);
+		static float2 pow (float2 a, float2 b) => float2(pow(a.x, b.x), pow(a.y, b.y));
+		static float3 pow (float3 a, float3 b) => float3(pow(a.x, b.x), pow(a.y, b.y), pow(a.z, b.z));
+		static float4 pow (float4 a, float4 b) => float4(pow(a.x, b.x), pow(a.y, b.y), pow(a.z, b.z), pow(a.w, b.w));
+
+		static float  sin (float  a) => (float) System.Math.Sin(a);
+		static float2 sin (float2 a) => float2(sin(a.x), sin(a.y));
+		static float3 sin (float3 a) => float3(sin(a.x), sin(a.y), sin(a.z));
+		static float4 sin (float4 a) => float4(sin(a.x), sin(a.y), sin(a.z), sin(a.w));
+
+		static float  sinh(float  a) => (float) System.Math.Sinh(a);
+		static float2 sinh(float2 a) => float2(sinh(a.x), sinh(a.y));
+		static float3 sinh(float3 a) => float3(sinh(a.x), sinh(a.y), sinh(a.z));
+		static float4 sinh(float4 a) => float4(sinh(a.x), sinh(a.y), sinh(a.z), sinh(a.w));
+
+		static float  asin(float  a) => (float) System.Math.Asin(a);
+		static float2 asin(float2 a) => float2(asin(a.x), asin(a.y));
+		static float3 asin(float3 a) => float3(asin(a.x), asin(a.y), asin(a.z));
+		static float4 asin(float4 a) => float4(asin(a.x), asin(a.y), asin(a.z), asin(a.w));
+
+		static float  cos (float  a) => (float) System.Math.Cos(a);
+		static float2 cos (float2 a) => float2(cos(a.x), cos(a.y));
+		static float3 cos (float3 a) => float3(cos(a.x), cos(a.y), cos(a.z));
+		static float4 cos (float4 a) => float4(cos(a.x), cos(a.y), cos(a.z), cos(a.w));
+
+		static float  cosh(float  a) => (float) System.Math.Cosh(a);
+		static float2 cosh(float2 a) => float2(cosh(a.x), cosh(a.y));
+		static float3 cosh(float3 a) => float3(cosh(a.x), cosh(a.y), cosh(a.z));
+		static float4 cosh(float4 a) => float4(cosh(a.x), cosh(a.y), cosh(a.z), cosh(a.w));
+
+		static float  acos(float  a) => (float) System.Math.Acos(a);
+		static float2 acos(float2 a) => float2(acos(a.x), acos(a.y));
+		static float3 acos(float3 a) => float3(acos(a.x), acos(a.y), acos(a.z));
+		static float4 acos(float4 a) => float4(acos(a.x), acos(a.y), acos(a.z), acos(a.w));
+
+		static float  tan (float  a) => (float) System.Math.Tan(a);
+		static float2 tan (float2 a) => float2(tan(a.x), tan(a.y));
+		static float3 tan (float3 a) => float3(tan(a.x), tan(a.y), tan(a.z));
+		static float4 tan (float4 a) => float4(tan(a.x), tan(a.y), tan(a.z), tan(a.w));
+
+		static float  tanh(float  a) => (float) System.Math.Tanh(a);
+		static float2 tanh(float2 a) => float2(tanh(a.x), tanh(a.y));
+		static float3 tanh(float3 a) => float3(tanh(a.x), tanh(a.y), tanh(a.z));
+		static float4 tanh(float4 a) => float4(tanh(a.x), tanh(a.y), tanh(a.z), tanh(a.w));
+
+		static float  atan(float  a) => (float) System.Math.Atan(a);
+		static float2 atan(float2 a) => float2(atan(a.x), atan(a.y));
+		static float3 atan(float3 a) => float3(atan(a.x), atan(a.y), atan(a.z));
+		static float4 atan(float4 a) => float4(atan(a.x), atan(a.y), atan(a.z), atan(a.w));
+
+		static float  atan2(float  a, float  b) => (float) System.Math.Atan2(a, b);
+		static float2 atan2(float2 a, float2 b) => float2(atan2(a.x, b.x), atan2(a.y, b.y));
+		static float3 atan2(float3 a, float3 b) => float3(atan2(a.x, b.x), atan2(a.y, b.y), atan2(a.z, b.z));
+		static float4 atan2(float4 a, float4 b) => float4(atan2(a.x, b.x), atan2(a.y, b.y), atan2(a.z, b.z), atan2(a.w, b.w));
 	}
 }
