@@ -16,4 +16,10 @@ namespace RodMath
 			this.y = x;
 		}
 	}
+
+	public static partial class math
+	{
+		public static float2 float2(float x, float y) => new float2(x, y);
+		public static float2 float2(float x) => new float2(x);
+	}
 }

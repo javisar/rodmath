@@ -20,4 +20,10 @@ namespace RodMath
 			this.w = x;
 		}
 	}
+
+	public static partial class math
+	{
+		public static float4 float4(float x, float y, float z, float w) => new float4(x, y, z, w);
+		public static float4 float4(float x) => new float4(x);
+	}
 }
