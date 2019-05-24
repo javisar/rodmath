@@ -69,5 +69,10 @@ namespace RodMath
 		public static float2 clamp(float2 v, float2 a, float2 b) => max(a, min(b, v));
 		public static float3 clamp(float3 v, float3 a, float3 b) => max(a, min(b, v));
 		public static float4 clamp(float4 v, float4 a, float4 b) => max(a, min(b, v));
+
+		public static float  saturate(float  v) => clamp(v, 0.0f, 1.0f);
+		public static float2 saturate(float2 v) => clamp(v, float2(0.0f), float2(1.0f));
+		public static float3 saturate(float3 v) => clamp(v, float3(0.0f), float3(1.0f));
+		public static float4 saturate(float4 v) => clamp(v, float4(0.0f), float4(1.0f));
 	}
 }
