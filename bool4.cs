@@ -20,4 +20,10 @@ namespace RodMath
 			this.w = x;
 		}
 	}
+
+	public static partial class math
+	{
+		public static bool4 bool4(bool x, bool y, bool z, bool w) => new bool4(x, y, z, w);
+		public static bool4 bool4(bool x) => new bool4(x);
+	}
 }

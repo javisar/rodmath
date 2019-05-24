@@ -18,4 +18,10 @@ namespace RodMath
 			this.z = x;
 		}
 	}
+
+	public static partial class math
+	{
+		public static bool3 bool3(bool x, bool y, bool z) => new bool3(x, y, z);
+		public static bool3 bool3(bool x) => new bool3(x);
+	}
 }

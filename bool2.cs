@@ -16,4 +16,10 @@ namespace RodMath
 			this.y = x;
 		}
 	}
+
+	public static partial class math
+	{
+		public static bool2 bool2(bool x, bool y) => new bool2(x, y);
+		public static bool2 bool2(bool x) => new bool2(x);
+	}
 }
