@@ -30,6 +30,11 @@ namespace RodMath
 		static int3 max(int3 a, int3 b) => (a + b + abs(a - b)) >> 1;
 		static int4 max(int4 a, int4 b) => (a + b + abs(a - b)) >> 1;
 
+		static uint  max(uint  a, uint  b) => a > b ? a : b;
+		static uint2 max(uint2 a, uint2 b) => uint2(max(a.x,b.x),max(a.y,b.y));
+		static uint3 max(uint3 a, uint3 b) => uint3(max(a.x,b.x),max(a.y,b.y),max(a.z,b.z));
+		static uint4 max(uint4 a, uint4 b) => uint4(max(a.x,b.x),max(a.y,b.y),max(a.z,b.z),max(a.w,b.w));
+
 		static float  max(float  a, float  b) => (a + b + abs(a - b)) * 0.5f;
 		static float2 max(float2 a, float2 b) => (a + b + abs(a - b)) * 0.5f;
 		static float3 max(float3 a, float3 b) => (a + b + abs(a - b)) * 0.5f;
@@ -39,6 +44,11 @@ namespace RodMath
 		static int2 min(int2 a, int2 b) => (a + b - abs(a - b)) >> 1;
 		static int3 min(int3 a, int3 b) => (a + b - abs(a - b)) >> 1;
 		static int4 min(int4 a, int4 b) => (a + b - abs(a - b)) >> 1;
+
+		static uint  min(uint  a, uint  b) => a > b ? b : a;
+		static uint2 min(uint2 a, uint2 b) => uint2(min(a.x,b.x),min(a.y,b.y));
+		static uint3 min(uint3 a, uint3 b) => uint3(min(a.x,b.x),min(a.y,b.y),min(a.z,b.z));
+		static uint4 min(uint4 a, uint4 b) => uint4(min(a.x,b.x),min(a.y,b.y),min(a.z,b.z),min(a.w,b.w));
 
 		static float  min(float  a, float  b) => (a + b - abs(a - b)) * 0.5f;
 		static float2 min(float2 a, float2 b) => (a + b - abs(a - b)) * 0.5f;
