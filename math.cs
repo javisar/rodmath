@@ -148,5 +148,26 @@ namespace RodMath
 		static int2 reflect(int2 a, int2 b) => a - 2 * b * dot(a, b);
 		static int3 reflect(int3 a, int3 b) => a - 2 * b * dot(a, b);
 		static int4 reflect(int4 a, int4 b) => a - 2 * b * dot(a, b);
+
+		static float exp (float a) => (float) System.Math.Exp(a);
+		static float exp2(float a) => (float) System.Math.Exp(a * ln_2);
+		static float log (float a) => (float) System.Math.Log(a);
+		static float log2(float a) => (float) System.Math.Log(a, 2.0f);
+		static float sqrt(float a) => (float) System.Math.Sqrt(a);
+		static float rsqrt(float a) => 1.0f / (float) System.Math.Sqrt(a);
+		static float rcp (float a) => 1.0f / a;
+		static float pow (float a, float b) => (float) System.Math.Pow(a, b);
+
+
+		static float sin (float a) => (float) System.Math.Sin(a);
+		static float sinh(float a) => (float) System.Math.Sinh(a);
+		static float asin(float a) => (float) System.Math.Asin(a);
+		static float cos (float a) => (float) System.Math.Cos(a);
+		static float cosh(float a) => (float) System.Math.Cosh(a);
+		static float acos(float a) => (float) System.Math.Acos(a);
+		static float tan (float a) => (float) System.Math.Tan(a);
+		static float tanh(float a) => (float) System.Math.Tanh(a);
+		static float atan(float a) => (float) System.Math.Atan(a);
+		static float atan2(float a, float b) => (float) System.Math.Atan2(a, b);
 	}
 }
