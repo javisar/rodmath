@@ -32,35 +32,35 @@ namespace RodMath
 		public static int3 abs(int3 a) => (a + (a >> 31)) ^ (a >> 31);
 		public static int4 abs(int4 a) => (a + (a >> 31)) ^ (a >> 31);
 
-		public static int  max(int  a, int  b) => (a + b + abs(a - b)) >> 1;
-		public static int2 max(int2 a, int2 b) => (a + b + abs(a - b)) >> 1;
-		public static int3 max(int3 a, int3 b) => (a + b + abs(a - b)) >> 1;
-		public static int4 max(int4 a, int4 b) => (a + b + abs(a - b)) >> 1;
+		public static int  max(int  a, int  b) => a > b ? a : b;
+		public static int2 max(int2 a, int2 b) => int2(max(a.x,b.x),max(a.y,b.y));
+		public static int3 max(int3 a, int3 b) => int3(max(a.x,b.x),max(a.y,b.y),max(a.z,b.z));
+		public static int4 max(int4 a, int4 b) => int4(max(a.x,b.x),max(a.y,b.y),max(a.z,b.z),max(a.w,b.w));
 
 		public static uint  max(uint  a, uint  b) => a > b ? a : b;
 		public static uint2 max(uint2 a, uint2 b) => uint2(max(a.x,b.x),max(a.y,b.y));
 		public static uint3 max(uint3 a, uint3 b) => uint3(max(a.x,b.x),max(a.y,b.y),max(a.z,b.z));
 		public static uint4 max(uint4 a, uint4 b) => uint4(max(a.x,b.x),max(a.y,b.y),max(a.z,b.z),max(a.w,b.w));
 
-		public static float  max(float  a, float  b) => (a + b + abs(a - b)) * 0.5f;
-		public static float2 max(float2 a, float2 b) => (a + b + abs(a - b)) * 0.5f;
-		public static float3 max(float3 a, float3 b) => (a + b + abs(a - b)) * 0.5f;
-		public static float4 max(float4 a, float4 b) => (a + b + abs(a - b)) * 0.5f;
+		public static float  max(float  a, float  b) => a > b ? a : b;
+		public static float2 max(float2 a, float2 b) => floatt2(max(a.x,b.x),max(a.y,b.y));
+		public static float3 max(float3 a, float3 b) => floatt3(max(a.x,b.x),max(a.y,b.y),max(a.z,b.z));
+		public static float4 max(float4 a, float4 b) => floatt4(max(a.x,b.x),max(a.y,b.y),max(a.z,b.z),max(a.w,b.w));
 
-		public static int  min(int  a, int  b) => (a + b - abs(a - b)) >> 1;
-		public static int2 min(int2 a, int2 b) => (a + b - abs(a - b)) >> 1;
-		public static int3 min(int3 a, int3 b) => (a + b - abs(a - b)) >> 1;
-		public static int4 min(int4 a, int4 b) => (a + b - abs(a - b)) >> 1;
+		public static int  min(int  a, int  b) => a > b ? b : a;
+		public static int2 min(int2 a, int2 b) => int2(min(a.x,b.x),min(a.y,b.y));
+		public static int3 min(int3 a, int3 b) => int3(min(a.x,b.x),min(a.y,b.y),min(a.z,b.z));
+		public static int4 min(int4 a, int4 b) => int4(min(a.x,b.x),min(a.y,b.y),min(a.z,b.z),min(a.w,b.w));
 
 		public static uint  min(uint  a, uint  b) => a > b ? b : a;
 		public static uint2 min(uint2 a, uint2 b) => uint2(min(a.x,b.x),min(a.y,b.y));
 		public static uint3 min(uint3 a, uint3 b) => uint3(min(a.x,b.x),min(a.y,b.y),min(a.z,b.z));
 		public static uint4 min(uint4 a, uint4 b) => uint4(min(a.x,b.x),min(a.y,b.y),min(a.z,b.z),min(a.w,b.w));
 
-		public static float  min(float  a, float  b) => (a + b - abs(a - b)) * 0.5f;
-		public static float2 min(float2 a, float2 b) => (a + b - abs(a - b)) * 0.5f;
-		public static float3 min(float3 a, float3 b) => (a + b - abs(a - b)) * 0.5f;
-		public static float4 min(float4 a, float4 b) => (a + b - abs(a - b)) * 0.5f;
+		public static float  min(float  a, float  b) => a > b ? b : a;
+		public static float2 min(float2 a, float2 b) => float2(min(a.x,b.x),min(a.y,b.y));
+		public static float3 min(float3 a, float3 b) => float3(min(a.x,b.x),min(a.y,b.y),min(a.z,b.z));
+		public static float4 min(float4 a, float4 b) => float4(min(a.x,b.x),min(a.y,b.y),min(a.z,b.z),min(a.w,b.w));
 
 		public static int    clamp(int  v, int  a, int  b) => max(a, min(b, v));
 		public static int2   clamp(int2 v, int2 a, int2 b) => max(a, min(b, v));
