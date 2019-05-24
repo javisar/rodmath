@@ -89,5 +89,10 @@ namespace RodMath
 		static unsafe bool2 isnan(float2 a) => ((*(uint2*) &a) & 0x7FFFFFFF) > 0x7F800000;
 		static unsafe bool3 isnan(float3 a) => ((*(uint3*) &a) & 0x7FFFFFFF) > 0x7F800000;
 		static unsafe bool4 isnan(float4 a) => ((*(uint4*) &a) & 0x7FFFFFFF) > 0x7F800000;
+
+		static float  floor(float  a) => (float) System.Math.Floor(a);
+		static float2 floor(float2 a) => float2(floor(a.x), floor(a.y));
+		static float3 floor(float3 a) => float3(floor(a.x), floor(a.y), floor(a.z));
+		static float4 floor(float4 a) => float4(floor(a.x), floor(a.y), floor(a.z), floor(a.w));
 	}
 }
