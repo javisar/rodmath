@@ -20,10 +20,10 @@ namespace RodMath
 		static unsafe float3 abs(float3 a) { uint3 b = (*(uint3*) &a) & 0x7FFFFFFF; return *(float3*) &b; }
 		static unsafe float4 abs(float4 a) { uint4 b = (*(uint4*) &a) & 0x7FFFFFFF; return *(float4*) &b; }
 
-		static unsafe int  abs(int  a) => (a + (a >> 31)) ^ (a >> 31);
-		static unsafe int2 abs(int2 a) => (a + (a >> 31)) ^ (a >> 31);
-		static unsafe int3 abs(int3 a) => (a + (a >> 31)) ^ (a >> 31);
-		static unsafe int4 abs(int4 a) => (a + (a >> 31)) ^ (a >> 31);
+		static int  abs(int  a) => (a + (a >> 31)) ^ (a >> 31);
+		static int2 abs(int2 a) => (a + (a >> 31)) ^ (a >> 31);
+		static int3 abs(int3 a) => (a + (a >> 31)) ^ (a >> 31);
+		static int4 abs(int4 a) => (a + (a >> 31)) ^ (a >> 31);
 
 	}
 }
