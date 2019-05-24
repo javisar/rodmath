@@ -55,6 +55,8 @@ namespace RodMath
 		public static float2 operator /(float2 a, float2 b) => new float2(a.x / b.x, a.y / b.y);
 		public static float2 operator /(float2 a, float  b) => new float2(a.x / b  , a.y / b  );
 		public static float2 operator /(float  a, float2 b) => new float2(a   / b.x, a   / b.y);
+
+		public static float2 operator -(float2 a) => new float2(-a.x, -a.y);
 	}
 
 	public static partial class math
