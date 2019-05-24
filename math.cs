@@ -114,5 +114,22 @@ namespace RodMath
 		static float2 frac(float2 a) => a - floor(a);
 		static float3 frac(float3 a) => a - floor(a);
 		static float4 frac(float4 a) => a - floor(a);
+
+		static float3 cross(float3 a, float3 b) => float3(a.x*b.y - a.y*b.x, a.y*b.z - a.z*b.y, a.z*b.x - a.x*b.z);
+
+		static int dot(int  a, int  b) => a * b;
+		static int dot(int2 a, int2 b) => a.x*b.x + a.y*b.y;
+		static int dot(int3 a, int3 b) => a.x*b.x + a.y*b.y + a.z*b.z;
+		static int dot(int4 a, int4 b) => a.x*b.x + a.y*b.y + a.z*b.z + a.w*b.w;
+
+		static uint dot(uint  a, uint  b) => a * b;
+		static uint dot(uint2 a, uint2 b) => a.x*b.x + a.y*b.y;
+		static uint dot(uint3 a, uint3 b) => a.x*b.x + a.y*b.y + a.z*b.z;
+		static uint dot(uint4 a, uint4 b) => a.x*b.x + a.y*b.y + a.z*b.z + a.w*b.w;
+
+		static float dot(float  a, float  b) => a * b;
+		static float dot(float2 a, float2 b) => a.x*b.x + a.y*b.y;
+		static float dot(float3 a, float3 b) => a.x*b.x + a.y*b.y + a.z*b.z;
+		static float dot(float4 a, float4 b) => a.x*b.x + a.y*b.y + a.z*b.z + a.w*b.w;
 	}
 }
