@@ -16,4 +16,10 @@ namespace RodMath
 			this.y = x;
 		}
 	}
+
+	public static partial class math
+	{
+		public static uint2 uint2(uint x, uint y) => new uint2(x, y);
+		public static uint2 uint2(uint x) => new uint2(x);
+	}
 }
