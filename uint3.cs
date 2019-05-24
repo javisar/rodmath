@@ -10,5 +10,12 @@ namespace RodMath
 			this.y = y;
 			this.z = z;
 		}
+
+		public uint3(uint x)
+		{
+			this.x = x;
+			this.y = x;
+			this.z = x;
+		}
 	}
 }

@@ -9,5 +9,11 @@ namespace RodMath
 			this.x = x;
 			this.y = y;
 		}
+
+		public uint2(uint x)
+		{
+			this.x = x;
+			this.y = x;
+		}
 	}
 }
