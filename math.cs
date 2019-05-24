@@ -5,6 +5,13 @@ namespace RodMath
 	// using static RodMath.math;
 	public static partial class math
 	{
+		const float pi   = 3.14159265f;
+		const float π    = 3.14159265f;
+		const float e    = 2.18281828f;
+		const float sq_2 = 1.41421356f;
+		const float rs_2 = 0.70710678f;
+		const float ln_2 = 0.69314718f;
+
 		static bool all(bool  a) => a;
 		static bool all(bool2 a) => a.x & a.y;
 		static bool all(bool3 a) => a.x & a.y & a.z;
