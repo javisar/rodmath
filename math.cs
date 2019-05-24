@@ -274,9 +274,24 @@ namespace RodMath
 		static float3 sign(float3 a) => float3(sign(a.x), sign(a.y), sign(a.z));
 		static float4 sign(float4 a) => float4(sign(a.x), sign(a.y), sign(a.z), sign(a.w));
 
+		static int  sign(int  a) => a > 0 ? 1 : a < 0 ? -1 : 0;
+		static int2 sign(int2 a) => int2(sign(a.x), sign(a.y));
+		static int3 sign(int3 a) => int3(sign(a.x), sign(a.y), sign(a.z));
+		static int4 sign(int4 a) => int4(sign(a.x), sign(a.y), sign(a.z), sign(a.w));
+
 		static float  step(float  a, float  b) => a >= b ? 1.0f : 0.0f;
 		static float2 step(float2 a, float2 b) => float2(step(a.x, b.x), step(a.y, b.y));
 		static float3 step(float3 a, float3 b) => float3(step(a.x, b.x), step(a.y, b.y), step(a.z, b.z));
 		static float4 step(float4 a, float4 b) => float4(step(a.x, b.x), step(a.y, b.y), step(a.z, b.z), step(a.w, b.w));
+
+		static int  step(int  a, int  b) => a >= b ? 1 : 0;
+		static int2 step(int2 a, int2 b) => int2(step(a.x, b.x), step(a.y, b.y));
+		static int3 step(int3 a, int3 b) => int3(step(a.x, b.x), step(a.y, b.y), step(a.z, b.z));
+		static int4 step(int4 a, int4 b) => int4(step(a.x, b.x), step(a.y, b.y), step(a.z, b.z), step(a.w, b.w));
+
+		static uint  step(uint  a, uint  b) => a >= b ? 1u : 0u;
+		static uint2 step(uint2 a, uint2 b) => uint2(step(a.x, b.x), step(a.y, b.y));
+		static uint3 step(uint3 a, uint3 b) => uint3(step(a.x, b.x), step(a.y, b.y), step(a.z, b.z));
+		static uint4 step(uint4 a, uint4 b) => uint4(step(a.x, b.x), step(a.y, b.y), step(a.z, b.z), step(a.w, b.w));
 	}
 }
