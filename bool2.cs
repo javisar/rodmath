@@ -2,6 +2,6 @@ namespace RodMath
 {
 	public struct bool2
 	{
-		bool x, y;
+		public bool x, y;
 	}
 }

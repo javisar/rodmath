@@ -2,6 +2,6 @@ namespace RodMath
 {
 	public struct uint3
 	{
-		uint x, y, z;
+		public uint x, y, z;
 	}
 }
