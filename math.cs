@@ -30,9 +30,19 @@ namespace RodMath
 		static int3 max(int3 a, int3 b) => (a + b + abs(a - b)) >> 1;
 		static int4 max(int4 a, int4 b) => (a + b + abs(a - b)) >> 1;
 
+		static float  max(float  a, float  b) => (a + b + abs(a - b)) * 0.5f;
+		static float2 max(float2 a, float2 b) => (a + b + abs(a - b)) * 0.5f;
+		static float3 max(float3 a, float3 b) => (a + b + abs(a - b)) * 0.5f;
+		static float4 max(float4 a, float4 b) => (a + b + abs(a - b)) * 0.5f;
+
 		static int  min(int  a, int  b) => (a + b - abs(a - b)) >> 1;
 		static int2 min(int2 a, int2 b) => (a + b - abs(a - b)) >> 1;
 		static int3 min(int3 a, int3 b) => (a + b - abs(a - b)) >> 1;
 		static int4 min(int4 a, int4 b) => (a + b - abs(a - b)) >> 1;
+
+		static float  min(float  a, float  b) => (a + b - abs(a - b)) * 0.5f;
+		static float2 min(float2 a, float2 b) => (a + b - abs(a - b)) * 0.5f;
+		static float3 min(float3 a, float3 b) => (a + b - abs(a - b)) * 0.5f;
+		static float4 min(float4 a, float4 b) => (a + b - abs(a - b)) * 0.5f;
 	}
 }
