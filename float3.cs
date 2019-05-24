@@ -18,6 +18,30 @@ namespace RodMath
 			this.z = x;
 		}
 
+		public static bool3 operator ==(float3 a, float3 b) => new bool3(a.x == b.x, a.y == b.y, a.z == b.z);
+		public static bool3 operator ==(float3 a, float  b) => new bool3(a.x == b  , a.y == b  , a.z == b  );
+		public static bool3 operator ==(float  a, float3 b) => new bool3(a   == b.x, a   == b.y, a   == b.z);
+
+		public static bool3 operator !=(float3 a, float3 b) => new bool3(a.x != b.x, a.y != b.y, a.z != b.z);
+		public static bool3 operator !=(float3 a, float  b) => new bool3(a.x != b  , a.y != b  , a.z != b  );
+		public static bool3 operator !=(float  a, float3 b) => new bool3(a   != b.x, a   != b.y, a   != b.z);
+
+		public static bool3 operator < (float3 a, float3 b) => new bool3(a.x <  b.x, a.y <  b.y, a.z <  b.z);
+		public static bool3 operator < (float3 a, float  b) => new bool3(a.x <  b  , a.y <  b  , a.z <  b  );
+		public static bool3 operator < (float  a, float3 b) => new bool3(a   <  b.x, a   <  b.y, a   <  b.z);
+
+		public static bool3 operator > (float3 a, float3 b) => new bool3(a.x >  b.x, a.y >  b.y, a.z >  b.z);
+		public static bool3 operator > (float3 a, float  b) => new bool3(a.x >  b  , a.y >  b  , a.z >  b  );
+		public static bool3 operator > (float  a, float3 b) => new bool3(a   >  b.x, a   >  b.y, a   >  b.z);
+
+		public static bool3 operator <=(float3 a, float3 b) => new bool3(a.x <= b.x, a.y <= b.y, a.z <= b.z);
+		public static bool3 operator <=(float3 a, float  b) => new bool3(a.x <= b  , a.y <= b  , a.z <= b  );
+		public static bool3 operator <=(float  a, float3 b) => new bool3(a   <= b.x, a   <= b.y, a   <= b.z);
+
+		public static bool3 operator >=(float3 a, float3 b) => new bool3(a.x >= b.x, a.y >= b.y, a.z >= b.z);
+		public static bool3 operator >=(float3 a, float  b) => new bool3(a.x >= b  , a.y >= b  , a.z >= b  );
+		public static bool3 operator >=(float  a, float3 b) => new bool3(a   >= b.x, a   >= b.y, a   >= b.z);
+
 		public static float3 operator +(float3 a, float3 b) => new float3(a.x + b.x, a.y + b.y, a.z + b.z);
 		public static float3 operator +(float3 a, float  b) => new float3(a.x + b  , a.y + b  , a.z + b  );
 		public static float3 operator +(float  a, float3 b) => new float3(a   + b.x, a   + b.y, a   + b.z);
