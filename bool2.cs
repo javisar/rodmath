@@ -9,5 +9,11 @@ namespace RodMath
 			this.x = x;
 			this.y = y;
 		}
+
+		public bool2(bool x)
+		{
+			this.x = x;
+			this.y = x;
+		}
 	}
 }
