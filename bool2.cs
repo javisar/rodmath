@@ -27,6 +27,8 @@ namespace RodMath
 		public static bool2 operator ^(bool2 a, bool2 b) => new bool2(a.x ^ b.x, a.y ^ b.y);
 		public static bool2 operator ^(bool2 a, bool  b) => new bool2(a.x ^ b  , a.y ^ b  );
 		public static bool2 operator ^(bool  a, bool2 b) => new bool2(a   ^ b.x, a   ^ b.y);
+
+		public static bool2 operator !(bool2 val) => new bool2(!val.x, !val.y);
 	}
 
 	public static partial class math

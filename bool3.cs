@@ -29,6 +29,8 @@ namespace RodMath
 		public static bool3 operator ^(bool3 a, bool3 b) => new bool3(a.x ^ b.x, a.y ^ b.y, a.z ^ b.z);
 		public static bool3 operator ^(bool3 a, bool  b) => new bool3(a.x ^ b  , a.y ^ b  , a.z ^ b  );
 		public static bool3 operator ^(bool  a, bool3 b) => new bool3(a   ^ b.x, a   ^ b.y, a   ^ b.z);
+
+		public static bool3 operator !(bool3 val) => new bool3(!val.x, !val.y, !val.z);
 	}
 
 	public static partial class math
