@@ -240,11 +240,23 @@ namespace RodMath
 		static float4 atan2(float4 a, float4 b) => float4(atan2(a.x, b.x), atan2(a.y, b.y), atan2(a.z, b.z), atan2(a.w, b.w));
 
 		static float  mad(float  a, float  b, float  c) => a*b + c;
+		static float2 mad(float2 a, float2 b, float2 c) => float2(mad(a.x, b.x, c.x), mad(a.y, b.y, c.y));
+		static float3 mad(float3 a, float3 b, float3 c) => float3(mad(a.x, b.x, c.x), mad(a.y, b.y, c.y), mad(a.z, b.z, c.z));
+		static float4 mad(float4 a, float4 b, float4 c) => float4(mad(a.x, b.x, c.x), mad(a.y, b.y, c.y), mad(a.z, b.z, c.z), mad(a.w, b.w, c.w));
 
 		static float  lerp(float  a, float  b, float  c) => a + c * (b - a);
+		static float2 lerp(float2 a, float2 b, float2 c) => float2(lerp(a.x, b.x, c.x), lerp(a.y, b.y, c.y));
+		static float3 lerp(float3 a, float3 b, float3 c) => float3(lerp(a.x, b.x, c.x), lerp(a.y, b.y, c.y), lerp(a.z, b.z, c.z));
+		static float4 lerp(float4 a, float4 b, float4 c) => float4(lerp(a.x, b.x, c.x), lerp(a.y, b.y, c.y), lerp(a.z, b.z, c.z), lerp(a.w, b.w, c.w));
 
 		static float  sign(float  a) => a > 0.0f ? 1.0f : a < 0.0f ? -1.0f : 0.0f;
+		static float2 sign(float2 a) => float2(sign(a.x), sign(a.y));
+		static float3 sign(float3 a) => float3(sign(a.x), sign(a.y), sign(a.z));
+		static float4 sign(float4 a) => float4(sign(a.x), sign(a.y), sign(a.z), sign(a.w));
 
 		static float  step(float  a, float  b) => a >= b ? 1.0f : 0.0f;
+		static float2 step(float2 a, float2 b) => float2(step(a.x, b.x), step(a.y, b.y));
+		static float3 step(float3 a, float3 b) => float3(step(a.x, b.x), step(a.y, b.y), step(a.z, b.z));
+		static float4 step(float4 a, float4 b) => float4(step(a.x, b.x), step(a.y, b.y), step(a.z, b.z), step(a.w, b.w));
 	}
 }
