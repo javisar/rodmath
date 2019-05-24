@@ -293,5 +293,20 @@ namespace RodMath
 		static uint2 step(uint2 a, uint2 b) => uint2(step(a.x, b.x), step(a.y, b.y));
 		static uint3 step(uint3 a, uint3 b) => uint3(step(a.x, b.x), step(a.y, b.y), step(a.z, b.z));
 		static uint4 step(uint4 a, uint4 b) => uint4(step(a.x, b.x), step(a.y, b.y), step(a.z, b.z), step(a.w, b.w));
+
+		static float  normalize(float  a) => sign(a);
+		static float2 normalize(float2 a) => a * rsqrt(dot(a, a));
+		static float3 normalize(float3 a) => a * rsqrt(dot(a, a));
+		static float4 normalize(float4 a) => a * rsqrt(dot(a, a));
+
+		static float length(float  a) => abs(a);
+		static float length(float2 a) => sqrt(dot(a, a));
+		static float length(float3 a) => sqrt(dot(a, a));
+		static float length(float4 a) => sqrt(dot(a, a));
+
+		static float distance(float  a, float  b) => length(a - b);
+		static float distance(float2 a, float2 b) => length(a - b);
+		static float distance(float3 a, float3 b) => length(a - b);
+		static float distance(float4 a, float4 b) => length(a - b);
 	}
 }
