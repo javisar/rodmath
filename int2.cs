@@ -67,6 +67,12 @@ namespace RodMath
 		public static int2 operator ^(int2 a, int2 b) => new int2(a.x ^ b.x, a.y ^ b.y);
 		public static int2 operator ^(int2 a, int  b) => new int2(a.x ^ b  , a.y ^ b  );
 		public static int2 operator ^(int  a, int2 b) => new int2(a   ^ b.x, a   ^ b.y);
+
+		public static int2 operator -(int2 a) => new int2(-a.x, -a.y);
+		public static int2 operator ~(int2 a) => new int2(~a.x, ~a.y);
+
+		public static int2 operator <<(int2 a, int b) => new int2(a.x << b, a.y << b);
+		public static int2 operator >>(int2 a, int b) => new int2(a.x >> b, a.y >> b);
 	}
 
 	public static partial class math
