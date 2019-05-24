@@ -54,5 +54,20 @@ namespace RodMath
 		static float2 min(float2 a, float2 b) => (a + b - abs(a - b)) * 0.5f;
 		static float3 min(float3 a, float3 b) => (a + b - abs(a - b)) * 0.5f;
 		static float4 min(float4 a, float4 b) => (a + b - abs(a - b)) * 0.5f;
+
+		public static int    clamp(int  v, int  a, int  b) => max(a, min(b, v));
+		public static int2   clamp(int2 v, int2 a, int2 b) => max(a, min(b, v));
+		public static int3   clamp(int3 v, int3 a, int3 b) => max(a, min(b, v));
+		public static int4   clamp(int4 v, int4 a, int4 b) => max(a, min(b, v));
+
+		public static uint   clamp(uint  v, uint  a, uint  b) => max(a, min(b, v));
+		public static uint2  clamp(uint2 v, uint2 a, uint2 b) => max(a, min(b, v));
+		public static uint3  clamp(uint3 v, uint3 a, uint3 b) => max(a, min(b, v));
+		public static uint4  clamp(uint4 v, uint4 a, uint4 b) => max(a, min(b, v));
+
+		public static float  clamp(float  v, float  a, float  b) => max(a, min(b, v));
+		public static float2 clamp(float2 v, float2 a, float2 b) => max(a, min(b, v));
+		public static float3 clamp(float3 v, float3 a, float3 b) => max(a, min(b, v));
+		public static float4 clamp(float4 v, float4 a, float4 b) => max(a, min(b, v));
 	}
 }
