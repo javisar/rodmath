@@ -238,5 +238,13 @@ namespace RodMath
 		static float2 atan2(float2 a, float2 b) => float2(atan2(a.x, b.x), atan2(a.y, b.y));
 		static float3 atan2(float3 a, float3 b) => float3(atan2(a.x, b.x), atan2(a.y, b.y), atan2(a.z, b.z));
 		static float4 atan2(float4 a, float4 b) => float4(atan2(a.x, b.x), atan2(a.y, b.y), atan2(a.z, b.z), atan2(a.w, b.w));
+
+		static float  mad(float  a, float  b, float  c) => a*b + c;
+
+		static float  lerp(float  a, float  b, float  c) => a + c * (b - a);
+
+		static float  sign(float  a) => a > 0.0f ? 1.0f : a < 0.0f ? -1.0f : 0.0f;
+
+		static float  step(float  a, float  b) => a >= b ? 1.0f : 0.0f;
 	}
 }
