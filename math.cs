@@ -109,5 +109,10 @@ namespace RodMath
 		static float2 trunc(float2 a) => float2(trunc(a.x), trunc(a.y));
 		static float3 trunc(float3 a) => float3(trunc(a.x), trunc(a.y), trunc(a.z));
 		static float4 trunc(float4 a) => float4(trunc(a.x), trunc(a.y), trunc(a.z), trunc(a.w));
+
+		static float  frac(float  a) => a - floor(a);
+		static float2 frac(float2 a) => a - floor(a);
+		static float3 frac(float3 a) => a - floor(a);
+		static float4 frac(float4 a) => a - floor(a);
 	}
 }
