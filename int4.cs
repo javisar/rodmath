@@ -22,6 +22,9 @@ namespace RodMath
 			this.w = x;
 		}
 
+		public override bool Equals(object obj) => obj is int4 a && math.all(this == a);
+		public override int GetHashCode() => x ^ (y * 2718281) ^ (z * 314159) ^ (w * 7071);
+
 		const MethodImplOptions Inline = MethodImplOptions.AggressiveInlining;
 
 		[MethodImpl(Inline)] public static bool4 operator ==(int4 a, int4 b) => new bool4 (a.x == b.x, a.y == b.y, a.z == b.z, a.w == b.w);

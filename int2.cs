@@ -18,6 +18,9 @@ namespace RodMath
 			this.y = x;
 		}
 
+		public override bool Equals(object obj) => obj is int2 a && math.all(this == a);
+		public override int GetHashCode() => x ^ (y * 2718281);
+
 		const MethodImplOptions Inline = MethodImplOptions.AggressiveInlining;
 
 		[MethodImpl(Inline)] public static bool2 operator ==(int2 a, int2 b) => new bool2(a.x == b.x, a.y == b.y);
