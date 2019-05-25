@@ -1,3 +1,5 @@
+using System.Runtime.CompilerServices;
+
 namespace RodMath
 {
 	public struct float2
@@ -16,52 +18,54 @@ namespace RodMath
 			this.y = x;
 		}
 
-		public static bool2 operator ==(float2 a, float2 b) => new bool2(a.x == b.x, a.y == b.y);
-		public static bool2 operator ==(float2 a, float  b) => new bool2(a.x == b  , a.y == b  );
-		public static bool2 operator ==(float  a, float2 b) => new bool2(a   == b.x, a   == b.y);
+		const MethodImplOptions Inline = MethodImplOptions.AggressiveInlining;
 
-		public static bool2 operator !=(float2 a, float2 b) => new bool2(a.x != b.x, a.y != b.y);
-		public static bool2 operator !=(float2 a, float  b) => new bool2(a.x != b  , a.y != b  );
-		public static bool2 operator !=(float  a, float2 b) => new bool2(a   != b.x, a   != b.y);
+		[MethodImpl(Inline)] public static bool2 operator ==(float2 a, float2 b) => new bool2(a.x == b.x, a.y == b.y);
+		[MethodImpl(Inline)] public static bool2 operator ==(float2 a, float  b) => new bool2(a.x == b  , a.y == b  );
+		[MethodImpl(Inline)] public static bool2 operator ==(float  a, float2 b) => new bool2(a   == b.x, a   == b.y);
 
-		public static bool2 operator < (float2 a, float2 b) => new bool2(a.x <  b.x, a.y <  b.y);
-		public static bool2 operator < (float2 a, float  b) => new bool2(a.x <  b  , a.y <  b  );
-		public static bool2 operator < (float  a, float2 b) => new bool2(a   <  b.x, a   <  b.y);
+		[MethodImpl(Inline)] public static bool2 operator !=(float2 a, float2 b) => new bool2(a.x != b.x, a.y != b.y);
+		[MethodImpl(Inline)] public static bool2 operator !=(float2 a, float  b) => new bool2(a.x != b  , a.y != b  );
+		[MethodImpl(Inline)] public static bool2 operator !=(float  a, float2 b) => new bool2(a   != b.x, a   != b.y);
 
-		public static bool2 operator > (float2 a, float2 b) => new bool2(a.x >  b.x, a.y >  b.y);
-		public static bool2 operator > (float2 a, float  b) => new bool2(a.x >  b  , a.y >  b  );
-		public static bool2 operator > (float  a, float2 b) => new bool2(a   >  b.x, a   >  b.y);
+		[MethodImpl(Inline)] public static bool2 operator < (float2 a, float2 b) => new bool2(a.x <  b.x, a.y <  b.y);
+		[MethodImpl(Inline)] public static bool2 operator < (float2 a, float  b) => new bool2(a.x <  b  , a.y <  b  );
+		[MethodImpl(Inline)] public static bool2 operator < (float  a, float2 b) => new bool2(a   <  b.x, a   <  b.y);
 
-		public static bool2 operator <=(float2 a, float2 b) => new bool2(a.x <= b.x, a.y <= b.y);
-		public static bool2 operator <=(float2 a, float  b) => new bool2(a.x <= b  , a.y <= b  );
-		public static bool2 operator <=(float  a, float2 b) => new bool2(a   <= b.x, a   <= b.y);
+		[MethodImpl(Inline)] public static bool2 operator > (float2 a, float2 b) => new bool2(a.x >  b.x, a.y >  b.y);
+		[MethodImpl(Inline)] public static bool2 operator > (float2 a, float  b) => new bool2(a.x >  b  , a.y >  b  );
+		[MethodImpl(Inline)] public static bool2 operator > (float  a, float2 b) => new bool2(a   >  b.x, a   >  b.y);
 
-		public static bool2 operator >=(float2 a, float2 b) => new bool2(a.x >= b.x, a.y >= b.y);
-		public static bool2 operator >=(float2 a, float  b) => new bool2(a.x >= b  , a.y >= b  );
-		public static bool2 operator >=(float  a, float2 b) => new bool2(a   >= b.x, a   >= b.y);
+		[MethodImpl(Inline)] public static bool2 operator <=(float2 a, float2 b) => new bool2(a.x <= b.x, a.y <= b.y);
+		[MethodImpl(Inline)] public static bool2 operator <=(float2 a, float  b) => new bool2(a.x <= b  , a.y <= b  );
+		[MethodImpl(Inline)] public static bool2 operator <=(float  a, float2 b) => new bool2(a   <= b.x, a   <= b.y);
 
-		public static float2 operator +(float2 a, float2 b) => new float2(a.x + b.x, a.y + b.y);
-		public static float2 operator +(float2 a, float  b) => new float2(a.x + b  , a.y + b  );
-		public static float2 operator +(float  a, float2 b) => new float2(a   + b.x, a   + b.y);
+		[MethodImpl(Inline)] public static bool2 operator >=(float2 a, float2 b) => new bool2(a.x >= b.x, a.y >= b.y);
+		[MethodImpl(Inline)] public static bool2 operator >=(float2 a, float  b) => new bool2(a.x >= b  , a.y >= b  );
+		[MethodImpl(Inline)] public static bool2 operator >=(float  a, float2 b) => new bool2(a   >= b.x, a   >= b.y);
 
-		public static float2 operator -(float2 a, float2 b) => new float2(a.x - b.x, a.y - b.y);
-		public static float2 operator -(float2 a, float  b) => new float2(a.x - b  , a.y - b  );
-		public static float2 operator -(float  a, float2 b) => new float2(a   - b.x, a   - b.y);
+		[MethodImpl(Inline)] public static float2 operator +(float2 a, float2 b) => new float2(a.x + b.x, a.y + b.y);
+		[MethodImpl(Inline)] public static float2 operator +(float2 a, float  b) => new float2(a.x + b  , a.y + b  );
+		[MethodImpl(Inline)] public static float2 operator +(float  a, float2 b) => new float2(a   + b.x, a   + b.y);
 
-		public static float2 operator *(float2 a, float2 b) => new float2(a.x * b.x, a.y * b.y);
-		public static float2 operator *(float2 a, float  b) => new float2(a.x * b  , a.y * b  );
-		public static float2 operator *(float  a, float2 b) => new float2(a   * b.x, a   * b.y);
+		[MethodImpl(Inline)] public static float2 operator -(float2 a, float2 b) => new float2(a.x - b.x, a.y - b.y);
+		[MethodImpl(Inline)] public static float2 operator -(float2 a, float  b) => new float2(a.x - b  , a.y - b  );
+		[MethodImpl(Inline)] public static float2 operator -(float  a, float2 b) => new float2(a   - b.x, a   - b.y);
 
-		public static float2 operator /(float2 a, float2 b) => new float2(a.x / b.x, a.y / b.y);
-		public static float2 operator /(float2 a, float  b) => new float2(a.x / b  , a.y / b  );
-		public static float2 operator /(float  a, float2 b) => new float2(a   / b.x, a   / b.y);
+		[MethodImpl(Inline)] public static float2 operator *(float2 a, float2 b) => new float2(a.x * b.x, a.y * b.y);
+		[MethodImpl(Inline)] public static float2 operator *(float2 a, float  b) => new float2(a.x * b  , a.y * b  );
+		[MethodImpl(Inline)] public static float2 operator *(float  a, float2 b) => new float2(a   * b.x, a   * b.y);
 
-		public static float2 operator -(float2 a) => new float2(-a.x, -a.y);
+		[MethodImpl(Inline)] public static float2 operator /(float2 a, float2 b) => new float2(a.x / b.x, a.y / b.y);
+		[MethodImpl(Inline)] public static float2 operator /(float2 a, float  b) => new float2(a.x / b  , a.y / b  );
+		[MethodImpl(Inline)] public static float2 operator /(float  a, float2 b) => new float2(a   / b.x, a   / b.y);
+
+		[MethodImpl(Inline)] public static float2 operator -(float2 a) => new float2(-a.x, -a.y);
 	}
 
 	public static partial class math
 	{
-		public static float2 float2(float x, float y) => new float2(x, y);
-		public static float2 float2(float x) => new float2(x);
+		[MethodImpl(Inline)] public static float2 float2(float x, float y) => new float2(x, y);
+		[MethodImpl(Inline)] public static float2 float2(float x) => new float2(x);
 	}
 }
