@@ -1,3 +1,5 @@
+using System.Runtime.CompilerServices;
+
 namespace RodMath
 {
 	public struct uint3
@@ -18,68 +20,70 @@ namespace RodMath
 			this.z = x;
 		}
 
-		public static bool3 operator ==(uint3 a, uint3 b) => new bool3(a.x == b.x, a.y == b.y, a.z == b.z);
-		public static bool3 operator ==(uint3 a, uint  b) => new bool3(a.x == b  , a.y == b  , a.z == b  );
-		public static bool3 operator ==(uint  a, uint3 b) => new bool3(a   == b.x, a   == b.y, a   == b.z);
+		const MethodImplOptions Inline = MethodImplOptions.AggressiveInlining;
 
-		public static bool3 operator !=(uint3 a, uint3 b) => new bool3(a.x != b.x, a.y != b.y, a.z != b.z);
-		public static bool3 operator !=(uint3 a, uint  b) => new bool3(a.x != b  , a.y != b  , a.z != b  );
-		public static bool3 operator !=(uint  a, uint3 b) => new bool3(a   != b.x, a   != b.y, a   != b.z);
+		[MethodImpl(Inline)] public static bool3 operator ==(uint3 a, uint3 b) => new bool3(a.x == b.x, a.y == b.y, a.z == b.z);
+		[MethodImpl(Inline)] public static bool3 operator ==(uint3 a, uint  b) => new bool3(a.x == b  , a.y == b  , a.z == b  );
+		[MethodImpl(Inline)] public static bool3 operator ==(uint  a, uint3 b) => new bool3(a   == b.x, a   == b.y, a   == b.z);
 
-		public static bool3 operator < (uint3 a, uint3 b) => new bool3(a.x <  b.x, a.y <  b.y, a.z <  b.z);
-		public static bool3 operator < (uint3 a, uint  b) => new bool3(a.x <  b  , a.y <  b  , a.z <  b  );
-		public static bool3 operator < (uint  a, uint3 b) => new bool3(a   <  b.x, a   <  b.y, a   <  b.z);
+		[MethodImpl(Inline)] public static bool3 operator !=(uint3 a, uint3 b) => new bool3(a.x != b.x, a.y != b.y, a.z != b.z);
+		[MethodImpl(Inline)] public static bool3 operator !=(uint3 a, uint  b) => new bool3(a.x != b  , a.y != b  , a.z != b  );
+		[MethodImpl(Inline)] public static bool3 operator !=(uint  a, uint3 b) => new bool3(a   != b.x, a   != b.y, a   != b.z);
 
-		public static bool3 operator > (uint3 a, uint3 b) => new bool3(a.x >  b.x, a.y >  b.y, a.z >  b.z);
-		public static bool3 operator > (uint3 a, uint  b) => new bool3(a.x >  b  , a.y >  b  , a.z >  b  );
-		public static bool3 operator > (uint  a, uint3 b) => new bool3(a   >  b.x, a   >  b.y, a   >  b.z);
+		[MethodImpl(Inline)] public static bool3 operator < (uint3 a, uint3 b) => new bool3(a.x <  b.x, a.y <  b.y, a.z <  b.z);
+		[MethodImpl(Inline)] public static bool3 operator < (uint3 a, uint  b) => new bool3(a.x <  b  , a.y <  b  , a.z <  b  );
+		[MethodImpl(Inline)] public static bool3 operator < (uint  a, uint3 b) => new bool3(a   <  b.x, a   <  b.y, a   <  b.z);
 
-		public static bool3 operator <=(uint3 a, uint3 b) => new bool3(a.x <= b.x, a.y <= b.y, a.z <= b.z);
-		public static bool3 operator <=(uint3 a, uint  b) => new bool3(a.x <= b  , a.y <= b  , a.z <= b  );
-		public static bool3 operator <=(uint  a, uint3 b) => new bool3(a   <= b.x, a   <= b.y, a   <= b.z);
+		[MethodImpl(Inline)] public static bool3 operator > (uint3 a, uint3 b) => new bool3(a.x >  b.x, a.y >  b.y, a.z >  b.z);
+		[MethodImpl(Inline)] public static bool3 operator > (uint3 a, uint  b) => new bool3(a.x >  b  , a.y >  b  , a.z >  b  );
+		[MethodImpl(Inline)] public static bool3 operator > (uint  a, uint3 b) => new bool3(a   >  b.x, a   >  b.y, a   >  b.z);
 
-		public static bool3 operator >=(uint3 a, uint3 b) => new bool3(a.x >= b.x, a.y >= b.y, a.z >= b.z);
-		public static bool3 operator >=(uint3 a, uint  b) => new bool3(a.x >= b  , a.y >= b  , a.z >= b  );
-		public static bool3 operator >=(uint  a, uint3 b) => new bool3(a   >= b.x, a   >= b.y, a   >= b.z);
+		[MethodImpl(Inline)] public static bool3 operator <=(uint3 a, uint3 b) => new bool3(a.x <= b.x, a.y <= b.y, a.z <= b.z);
+		[MethodImpl(Inline)] public static bool3 operator <=(uint3 a, uint  b) => new bool3(a.x <= b  , a.y <= b  , a.z <= b  );
+		[MethodImpl(Inline)] public static bool3 operator <=(uint  a, uint3 b) => new bool3(a   <= b.x, a   <= b.y, a   <= b.z);
 
-		public static uint3 operator +(uint3 a, uint3 b) => new uint3(a.x + b.x, a.y + b.y, a.z + b.z);
-		public static uint3 operator +(uint3 a, uint  b) => new uint3(a.x + b  , a.y + b  , a.z + b  );
-		public static uint3 operator +(uint  a, uint3 b) => new uint3(a   + b.x, a   + b.y, a   + b.z);
+		[MethodImpl(Inline)] public static bool3 operator >=(uint3 a, uint3 b) => new bool3(a.x >= b.x, a.y >= b.y, a.z >= b.z);
+		[MethodImpl(Inline)] public static bool3 operator >=(uint3 a, uint  b) => new bool3(a.x >= b  , a.y >= b  , a.z >= b  );
+		[MethodImpl(Inline)] public static bool3 operator >=(uint  a, uint3 b) => new bool3(a   >= b.x, a   >= b.y, a   >= b.z);
 
-		public static uint3 operator -(uint3 a, uint3 b) => new uint3(a.x - b.x, a.y - b.y, a.z - b.z);
-		public static uint3 operator -(uint3 a, uint  b) => new uint3(a.x - b  , a.y - b  , a.z - b  );
-		public static uint3 operator -(uint  a, uint3 b) => new uint3(a   - b.x, a   - b.y, a   - b.z);
+		[MethodImpl(Inline)] public static uint3 operator +(uint3 a, uint3 b) => new uint3(a.x + b.x, a.y + b.y, a.z + b.z);
+		[MethodImpl(Inline)] public static uint3 operator +(uint3 a, uint  b) => new uint3(a.x + b  , a.y + b  , a.z + b  );
+		[MethodImpl(Inline)] public static uint3 operator +(uint  a, uint3 b) => new uint3(a   + b.x, a   + b.y, a   + b.z);
 
-		public static uint3 operator *(uint3 a, uint3 b) => new uint3(a.x * b.x, a.y * b.y, a.z * b.z);
-		public static uint3 operator *(uint3 a, uint  b) => new uint3(a.x * b  , a.y * b  , a.z * b  );
-		public static uint3 operator *(uint  a, uint3 b) => new uint3(a   * b.x, a   * b.y, a   * b.z);
+		[MethodImpl(Inline)] public static uint3 operator -(uint3 a, uint3 b) => new uint3(a.x - b.x, a.y - b.y, a.z - b.z);
+		[MethodImpl(Inline)] public static uint3 operator -(uint3 a, uint  b) => new uint3(a.x - b  , a.y - b  , a.z - b  );
+		[MethodImpl(Inline)] public static uint3 operator -(uint  a, uint3 b) => new uint3(a   - b.x, a   - b.y, a   - b.z);
 
-		public static uint3 operator /(uint3 a, uint3 b) => new uint3(a.x / b.x, a.y / b.y, a.z / b.z);
-		public static uint3 operator /(uint3 a, uint  b) => new uint3(a.x / b  , a.y / b  , a.z / b  );
-		public static uint3 operator /(uint  a, uint3 b) => new uint3(a   / b.x, a   / b.y, a   / b.z);
+		[MethodImpl(Inline)] public static uint3 operator *(uint3 a, uint3 b) => new uint3(a.x * b.x, a.y * b.y, a.z * b.z);
+		[MethodImpl(Inline)] public static uint3 operator *(uint3 a, uint  b) => new uint3(a.x * b  , a.y * b  , a.z * b  );
+		[MethodImpl(Inline)] public static uint3 operator *(uint  a, uint3 b) => new uint3(a   * b.x, a   * b.y, a   * b.z);
 
-		public static uint3 operator &(uint3 a, uint3 b) => new uint3(a.x & b.x, a.y & b.y, a.z & b.z);
-		public static uint3 operator &(uint3 a, uint  b) => new uint3(a.x & b  , a.y & b  , a.z & b  );
-		public static uint3 operator &(uint  a, uint3 b) => new uint3(a   & b.x, a   & b.y, a   & b.z);
+		[MethodImpl(Inline)] public static uint3 operator /(uint3 a, uint3 b) => new uint3(a.x / b.x, a.y / b.y, a.z / b.z);
+		[MethodImpl(Inline)] public static uint3 operator /(uint3 a, uint  b) => new uint3(a.x / b  , a.y / b  , a.z / b  );
+		[MethodImpl(Inline)] public static uint3 operator /(uint  a, uint3 b) => new uint3(a   / b.x, a   / b.y, a   / b.z);
 
-		public static uint3 operator |(uint3 a, uint3 b) => new uint3(a.x | b.x, a.y | b.y, a.z | b.z);
-		public static uint3 operator |(uint3 a, uint  b) => new uint3(a.x | b  , a.y | b  , a.z | b  );
-		public static uint3 operator |(uint  a, uint3 b) => new uint3(a   | b.x, a   | b.y, a   | b.z);
+		[MethodImpl(Inline)] public static uint3 operator &(uint3 a, uint3 b) => new uint3(a.x & b.x, a.y & b.y, a.z & b.z);
+		[MethodImpl(Inline)] public static uint3 operator &(uint3 a, uint  b) => new uint3(a.x & b  , a.y & b  , a.z & b  );
+		[MethodImpl(Inline)] public static uint3 operator &(uint  a, uint3 b) => new uint3(a   & b.x, a   & b.y, a   & b.z);
 
-		public static uint3 operator ^(uint3 a, uint3 b) => new uint3(a.x ^ b.x, a.y ^ b.y, a.z ^ b.z);
-		public static uint3 operator ^(uint3 a, uint  b) => new uint3(a.x ^ b  , a.y ^ b  , a.z ^ b  );
-		public static uint3 operator ^(uint  a, uint3 b) => new uint3(a   ^ b.x, a   ^ b.y, a   ^ b.z);
+		[MethodImpl(Inline)] public static uint3 operator |(uint3 a, uint3 b) => new uint3(a.x | b.x, a.y | b.y, a.z | b.z);
+		[MethodImpl(Inline)] public static uint3 operator |(uint3 a, uint  b) => new uint3(a.x | b  , a.y | b  , a.z | b  );
+		[MethodImpl(Inline)] public static uint3 operator |(uint  a, uint3 b) => new uint3(a   | b.x, a   | b.y, a   | b.z);
 
-		public static uint3 operator -(uint3 a) => new uint3((uint)-a.x, (uint)-a.y, (uint)-a.z);
-		public static uint3 operator ~(uint3 a) => new uint3(~a.x, ~a.y, ~a.z);
+		[MethodImpl(Inline)] public static uint3 operator ^(uint3 a, uint3 b) => new uint3(a.x ^ b.x, a.y ^ b.y, a.z ^ b.z);
+		[MethodImpl(Inline)] public static uint3 operator ^(uint3 a, uint  b) => new uint3(a.x ^ b  , a.y ^ b  , a.z ^ b  );
+		[MethodImpl(Inline)] public static uint3 operator ^(uint  a, uint3 b) => new uint3(a   ^ b.x, a   ^ b.y, a   ^ b.z);
 
-		public static uint3 operator <<(uint3 a, int b) => new uint3(a.x << b, a.y << b, a.z << b);
-		public static uint3 operator >>(uint3 a, int b) => new uint3(a.x >> b, a.y >> b, a.z >> b);
+		[MethodImpl(Inline)] public static uint3 operator -(uint3 a) => new uint3((uint)-a.x, (uint)-a.y, (uint)-a.z);
+		[MethodImpl(Inline)] public static uint3 operator ~(uint3 a) => new uint3(~a.x, ~a.y, ~a.z);
+
+		[MethodImpl(Inline)] public static uint3 operator <<(uint3 a, int b) => new uint3(a.x << b, a.y << b, a.z << b);
+		[MethodImpl(Inline)] public static uint3 operator >>(uint3 a, int b) => new uint3(a.x >> b, a.y >> b, a.z >> b);
 	}
 
 	public static partial class math
 	{
-		public static uint3 uint3(uint x, uint y, uint z) => new uint3(x, y, z);
-		public static uint3 uint3(uint x) => new uint3(x);
+		[MethodImpl(Inline)] public static uint3 uint3(uint x, uint y, uint z) => new uint3(x, y, z);
+		[MethodImpl(Inline)] public static uint3 uint3(uint x) => new uint3(x);
 	}
 }
