@@ -20,6 +20,9 @@ namespace RodMath
 			this.z = x;
 		}
 
+		public override bool Equals(object obj) => obj is uint3 a && math.all(this == a);
+		public override int GetHashCode() => (int) (x ^ (y * 2718281) ^ (z * 314159));
+
 		const MethodImplOptions Inline = MethodImplOptions.AggressiveInlining;
 
 		[MethodImpl(Inline)] public static bool3 operator ==(uint3 a, uint3 b) => new bool3(a.x == b.x, a.y == b.y, a.z == b.z);
