@@ -1,3 +1,5 @@
+using System.Runtime.CompilerServices;
+
 namespace RodMath
 {
 	public struct int2
@@ -16,68 +18,70 @@ namespace RodMath
 			this.y = x;
 		}
 
-		public static bool2 operator ==(int2 a, int2 b) => new bool2(a.x == b.x, a.y == b.y);
-		public static bool2 operator ==(int2 a, int  b) => new bool2(a.x == b  , a.y == b  );
-		public static bool2 operator ==(int  a, int2 b) => new bool2(a   == b.x, a   == b.y);
+		const MethodImplOptions Inline = MethodImplOptions.AggressiveInlining;
 
-		public static bool2 operator !=(int2 a, int2 b) => new bool2(a.x != b.x, a.y != b.y);
-		public static bool2 operator !=(int2 a, int  b) => new bool2(a.x != b  , a.y != b  );
-		public static bool2 operator !=(int  a, int2 b) => new bool2(a   != b.x, a   != b.y);
+		[MethodImpl(Inline)] public static bool2 operator ==(int2 a, int2 b) => new bool2(a.x == b.x, a.y == b.y);
+		[MethodImpl(Inline)] public static bool2 operator ==(int2 a, int  b) => new bool2(a.x == b  , a.y == b  );
+		[MethodImpl(Inline)] public static bool2 operator ==(int  a, int2 b) => new bool2(a   == b.x, a   == b.y);
 
-		public static bool2 operator < (int2 a, int2 b) => new bool2(a.x <  b.x, a.y <  b.y);
-		public static bool2 operator < (int2 a, int  b) => new bool2(a.x <  b  , a.y <  b  );
-		public static bool2 operator < (int  a, int2 b) => new bool2(a   <  b.x, a   <  b.y);
+		[MethodImpl(Inline)] public static bool2 operator !=(int2 a, int2 b) => new bool2(a.x != b.x, a.y != b.y);
+		[MethodImpl(Inline)] public static bool2 operator !=(int2 a, int  b) => new bool2(a.x != b  , a.y != b  );
+		[MethodImpl(Inline)] public static bool2 operator !=(int  a, int2 b) => new bool2(a   != b.x, a   != b.y);
 
-		public static bool2 operator > (int2 a, int2 b) => new bool2(a.x >  b.x, a.y >  b.y);
-		public static bool2 operator > (int2 a, int  b) => new bool2(a.x >  b  , a.y >  b  );
-		public static bool2 operator > (int  a, int2 b) => new bool2(a   >  b.x, a   >  b.y);
+		[MethodImpl(Inline)] public static bool2 operator < (int2 a, int2 b) => new bool2(a.x <  b.x, a.y <  b.y);
+		[MethodImpl(Inline)] public static bool2 operator < (int2 a, int  b) => new bool2(a.x <  b  , a.y <  b  );
+		[MethodImpl(Inline)] public static bool2 operator < (int  a, int2 b) => new bool2(a   <  b.x, a   <  b.y);
 
-		public static bool2 operator <=(int2 a, int2 b) => new bool2(a.x <= b.x, a.y <= b.y);
-		public static bool2 operator <=(int2 a, int  b) => new bool2(a.x <= b  , a.y <= b  );
-		public static bool2 operator <=(int  a, int2 b) => new bool2(a   <= b.x, a   <= b.y);
+		[MethodImpl(Inline)] public static bool2 operator > (int2 a, int2 b) => new bool2(a.x >  b.x, a.y >  b.y);
+		[MethodImpl(Inline)] public static bool2 operator > (int2 a, int  b) => new bool2(a.x >  b  , a.y >  b  );
+		[MethodImpl(Inline)] public static bool2 operator > (int  a, int2 b) => new bool2(a   >  b.x, a   >  b.y);
 
-		public static bool2 operator >=(int2 a, int2 b) => new bool2(a.x >= b.x, a.y >= b.y);
-		public static bool2 operator >=(int2 a, int  b) => new bool2(a.x >= b  , a.y >= b  );
-		public static bool2 operator >=(int  a, int2 b) => new bool2(a   >= b.x, a   >= b.y);
+		[MethodImpl(Inline)] public static bool2 operator <=(int2 a, int2 b) => new bool2(a.x <= b.x, a.y <= b.y);
+		[MethodImpl(Inline)] public static bool2 operator <=(int2 a, int  b) => new bool2(a.x <= b  , a.y <= b  );
+		[MethodImpl(Inline)] public static bool2 operator <=(int  a, int2 b) => new bool2(a   <= b.x, a   <= b.y);
 
-		public static int2 operator +(int2 a, int2 b) => new int2(a.x + b.x, a.y + b.y);
-		public static int2 operator +(int2 a, int  b) => new int2(a.x + b  , a.y + b  );
-		public static int2 operator +(int  a, int2 b) => new int2(a   + b.x, a   + b.y);
+		[MethodImpl(Inline)] public static bool2 operator >=(int2 a, int2 b) => new bool2(a.x >= b.x, a.y >= b.y);
+		[MethodImpl(Inline)] public static bool2 operator >=(int2 a, int  b) => new bool2(a.x >= b  , a.y >= b  );
+		[MethodImpl(Inline)] public static bool2 operator >=(int  a, int2 b) => new bool2(a   >= b.x, a   >= b.y);
 
-		public static int2 operator -(int2 a, int2 b) => new int2(a.x - b.x, a.y - b.y);
-		public static int2 operator -(int2 a, int  b) => new int2(a.x - b  , a.y - b  );
-		public static int2 operator -(int  a, int2 b) => new int2(a   - b.x, a   - b.y);
+		[MethodImpl(Inline)] public static int2 operator +(int2 a, int2 b) => new int2(a.x + b.x, a.y + b.y);
+		[MethodImpl(Inline)] public static int2 operator +(int2 a, int  b) => new int2(a.x + b  , a.y + b  );
+		[MethodImpl(Inline)] public static int2 operator +(int  a, int2 b) => new int2(a   + b.x, a   + b.y);
 
-		public static int2 operator *(int2 a, int2 b) => new int2(a.x * b.x, a.y * b.y);
-		public static int2 operator *(int2 a, int  b) => new int2(a.x * b  , a.y * b  );
-		public static int2 operator *(int  a, int2 b) => new int2(a   * b.x, a   * b.y);
+		[MethodImpl(Inline)] public static int2 operator -(int2 a, int2 b) => new int2(a.x - b.x, a.y - b.y);
+		[MethodImpl(Inline)] public static int2 operator -(int2 a, int  b) => new int2(a.x - b  , a.y - b  );
+		[MethodImpl(Inline)] public static int2 operator -(int  a, int2 b) => new int2(a   - b.x, a   - b.y);
 
-		public static int2 operator /(int2 a, int2 b) => new int2(a.x / b.x, a.y / b.y);
-		public static int2 operator /(int2 a, int  b) => new int2(a.x / b  , a.y / b  );
-		public static int2 operator /(int  a, int2 b) => new int2(a   / b.x, a   / b.y);
+		[MethodImpl(Inline)] public static int2 operator *(int2 a, int2 b) => new int2(a.x * b.x, a.y * b.y);
+		[MethodImpl(Inline)] public static int2 operator *(int2 a, int  b) => new int2(a.x * b  , a.y * b  );
+		[MethodImpl(Inline)] public static int2 operator *(int  a, int2 b) => new int2(a   * b.x, a   * b.y);
 
-		public static int2 operator &(int2 a, int2 b) => new int2(a.x & b.x, a.y & b.y);
-		public static int2 operator &(int2 a, int  b) => new int2(a.x & b  , a.y & b  );
-		public static int2 operator &(int  a, int2 b) => new int2(a   & b.x, a   & b.y);
+		[MethodImpl(Inline)] public static int2 operator /(int2 a, int2 b) => new int2(a.x / b.x, a.y / b.y);
+		[MethodImpl(Inline)] public static int2 operator /(int2 a, int  b) => new int2(a.x / b  , a.y / b  );
+		[MethodImpl(Inline)] public static int2 operator /(int  a, int2 b) => new int2(a   / b.x, a   / b.y);
 
-		public static int2 operator |(int2 a, int2 b) => new int2(a.x | b.x, a.y | b.y);
-		public static int2 operator |(int2 a, int  b) => new int2(a.x | b  , a.y | b  );
-		public static int2 operator |(int  a, int2 b) => new int2(a   | b.x, a   | b.y);
+		[MethodImpl(Inline)] public static int2 operator &(int2 a, int2 b) => new int2(a.x & b.x, a.y & b.y);
+		[MethodImpl(Inline)] public static int2 operator &(int2 a, int  b) => new int2(a.x & b  , a.y & b  );
+		[MethodImpl(Inline)] public static int2 operator &(int  a, int2 b) => new int2(a   & b.x, a   & b.y);
 
-		public static int2 operator ^(int2 a, int2 b) => new int2(a.x ^ b.x, a.y ^ b.y);
-		public static int2 operator ^(int2 a, int  b) => new int2(a.x ^ b  , a.y ^ b  );
-		public static int2 operator ^(int  a, int2 b) => new int2(a   ^ b.x, a   ^ b.y);
+		[MethodImpl(Inline)] public static int2 operator |(int2 a, int2 b) => new int2(a.x | b.x, a.y | b.y);
+		[MethodImpl(Inline)] public static int2 operator |(int2 a, int  b) => new int2(a.x | b  , a.y | b  );
+		[MethodImpl(Inline)] public static int2 operator |(int  a, int2 b) => new int2(a   | b.x, a   | b.y);
 
-		public static int2 operator -(int2 a) => new int2(-a.x, -a.y);
-		public static int2 operator ~(int2 a) => new int2(~a.x, ~a.y);
+		[MethodImpl(Inline)] public static int2 operator ^(int2 a, int2 b) => new int2(a.x ^ b.x, a.y ^ b.y);
+		[MethodImpl(Inline)] public static int2 operator ^(int2 a, int  b) => new int2(a.x ^ b  , a.y ^ b  );
+		[MethodImpl(Inline)] public static int2 operator ^(int  a, int2 b) => new int2(a   ^ b.x, a   ^ b.y);
 
-		public static int2 operator <<(int2 a, int b) => new int2(a.x << b, a.y << b);
-		public static int2 operator >>(int2 a, int b) => new int2(a.x >> b, a.y >> b);
+		[MethodImpl(Inline)] public static int2 operator -(int2 a) => new int2(-a.x, -a.y);
+		[MethodImpl(Inline)] public static int2 operator ~(int2 a) => new int2(~a.x, ~a.y);
+
+		[MethodImpl(Inline)] public static int2 operator <<(int2 a, int b) => new int2(a.x << b, a.y << b);
+		[MethodImpl(Inline)] public static int2 operator >>(int2 a, int b) => new int2(a.x >> b, a.y >> b);
 	}
 
 	public static partial class math
 	{
-		public static int2 int2(int x, int y) => new int2(x, y);
-		public static int2 int2(int x) => new int2(x);
+		[MethodImpl(Inline)] public static int2 int2(int x, int y) => new int2(x, y);
+		[MethodImpl(Inline)] public static int2 int2(int x) => new int2(x);
 	}
 }
