@@ -64,7 +64,13 @@ namespace RodMath
 		[MethodImpl(Inline)] public static float2 operator /(float  a, float2 b) => new float2(a   / b.x, a   / b.y);
 
 		[MethodImpl(Inline)] public static float2 operator -(float2 a) => new float2(-a.x, -a.y);
-	}
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public override string ToString()
+        {
+            return string.Format("float2({0}, {1})", x, y);
+        }
+    }
 
 	public static partial class math
 	{

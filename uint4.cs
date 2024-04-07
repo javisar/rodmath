@@ -84,7 +84,13 @@ namespace RodMath
 
 		[MethodImpl(Inline)] public static uint4 operator <<(uint4 a, int b) => new uint4(a.x << b, a.y << b, a.z << b, a.w << b);
 		[MethodImpl(Inline)] public static uint4 operator >>(uint4 a, int b) => new uint4(a.x >> b, a.y >> b, a.z >> b, a.w >> b);
-	}
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public override string ToString()
+        {
+            return string.Format("uint4({0}, {1}, {2}, {3})", x, y, z, w);
+        }
+    }
 
 	public static partial class math
 	{

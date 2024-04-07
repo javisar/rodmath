@@ -48,7 +48,13 @@ namespace RodMath
 		[MethodImpl(Inline)] public static bool4 operator ^(bool  a, bool4 b) => new bool4(a   ^ b.x,   a ^ b.y, a   ^ b.z, a   ^ b.w);
 
 		[MethodImpl(Inline)] public static bool4 operator !(bool4 val) => new bool4(!val.x, !val.y, !val.z, !val.w);
-	}
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public override string ToString()
+        {
+            return string.Format("bool4({0}, {1}, {2}, {3})", x, y, z, w);
+        }
+    }
 
 	public static partial class math
 	{

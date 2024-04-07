@@ -82,7 +82,13 @@ namespace RodMath
 
 		[MethodImpl(Inline)] public static uint3 operator <<(uint3 a, int b) => new uint3(a.x << b, a.y << b, a.z << b);
 		[MethodImpl(Inline)] public static uint3 operator >>(uint3 a, int b) => new uint3(a.x >> b, a.y >> b, a.z >> b);
-	}
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public override string ToString()
+        {
+            return string.Format("uint3({0}, {1}, {2})", x, y, z);
+        }
+    }
 
 	public static partial class math
 	{

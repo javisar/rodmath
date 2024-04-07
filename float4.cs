@@ -68,7 +68,13 @@ namespace RodMath
 		[MethodImpl(Inline)] public static float4 operator /(float  a, float4 b) => new float4(a   / b.x, a   / b.y, a   / b.z, a   / b.w);
 
 		[MethodImpl(Inline)] public static float4 operator -(float4 a) => new float4(-a.x, -a.y, -a.z, -a.w);
-	}
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public override string ToString()
+        {
+            return string.Format("float4({0}, {1}, {2}, {3})", x, y, z, w);
+        }
+    }
 
 	public static partial class math
 	{

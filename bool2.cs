@@ -44,7 +44,13 @@ namespace RodMath
 		[MethodImpl(Inline)] public static bool2 operator ^(bool  a, bool2 b) => new bool2(a   ^ b.x, a   ^ b.y);
 
 		[MethodImpl(Inline)] public static bool2 operator !(bool2 val) => new bool2(!val.x, !val.y);
-	}
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public override string ToString()
+        {
+            return string.Format("bool2({0}, {1})", x, y,);
+        }
+    }
 
 	public static partial class math
 	{

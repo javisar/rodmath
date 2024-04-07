@@ -46,7 +46,13 @@ namespace RodMath
 		[MethodImpl(Inline)] public static bool3 operator ^(bool  a, bool3 b) => new bool3(a   ^ b.x, a   ^ b.y, a   ^ b.z);
 
 		[MethodImpl(Inline)] public static bool3 operator !(bool3 val) => new bool3(!val.x, !val.y, !val.z);
-	}
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public override string ToString()
+        {
+            return string.Format("bool3({0}, {1}, {2}, {3})", x, y, z);
+        }
+    }
 
 	public static partial class math
 	{

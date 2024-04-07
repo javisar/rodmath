@@ -80,7 +80,13 @@ namespace RodMath
 
 		[MethodImpl(Inline)] public static int2 operator <<(int2 a, int b) => new int2(a.x << b, a.y << b);
 		[MethodImpl(Inline)] public static int2 operator >>(int2 a, int b) => new int2(a.x >> b, a.y >> b);
-	}
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public override string ToString()
+        {
+            return string.Format("int2({0}, {1})", x, y);
+        }
+    }
 
 	public static partial class math
 	{

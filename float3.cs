@@ -66,7 +66,13 @@ namespace RodMath
 		[MethodImpl(Inline)] public static float3 operator /(float  a, float3 b) => new float3(a   / b.x, a   / b.y, a   / b.z);
 
 		[MethodImpl(Inline)] public static float3 operator -(float3 a) => new float3(-a.x, -a.y, -a.z);
-	}
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public override string ToString()
+        {
+            return string.Format("float3({0}, {1}, {2})", x, y, z);
+        }
+    }
 
 	public static partial class math
 	{
